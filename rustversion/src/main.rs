@@ -10,6 +10,8 @@ fn main() {
     for _ in 0..100 {
         game_board.show();
         println!();
+        // pause for half a second 
+        std::thread::sleep(std::time::Duration::from_millis(500));
         game_board.update();
     }
 }        

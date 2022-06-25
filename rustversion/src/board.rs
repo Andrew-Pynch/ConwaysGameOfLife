@@ -90,18 +90,26 @@ impl Board {
 
         for row in 0..3 {
             for col in 0..3 {
-                    let mut neighbor: Cell = cell::get_new_cell();
-                    neighbor =  self.grid[cell_row as usize -1 + row][cell_col as usize - 1 + col];
+                let mut neighbor: Cell = cell::get_new_cell();
+                if cell_row - 1 + row < self.rows && cell_col - 1 + col < self.cols {
+                    neighbor =  self.grid[cell_row as usize - 1 as usize + row as usize][cell_col as usize - 1 as usize + col as usize];
                     if neighbor.get_coordinates() != cell.get_coordinates() {
                         if neighbor.is_alive() {
                             alive_neighbors.push(neighbor);
                         } else {
                             dead_neighbors.push(neighbor);
                         }
-                     }
+                    }
+                }
             }
         }
         
         return (alive_neighbors, dead_neighbors);
     }
+}
+
+pub fn cell_row_is_in_bounds(cell: Cell, cell_row: i32, cell_col: i32, board: Board) -> bool {
+    let mut is_in_bounds = false;
+    
+    return is_in_bounds;
 }

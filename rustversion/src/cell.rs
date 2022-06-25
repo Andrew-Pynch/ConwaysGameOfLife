@@ -1,5 +1,5 @@
 #[derive(Debug, Clone, Copy)]
-pub struct Cell{
+pub struct Cell {
     x: i32,
     y: i32,
     alive: bool,
@@ -13,23 +13,23 @@ pub fn get_new_cell() -> Cell {
     };
 }
 
-impl Cell{
+impl Cell {
     pub fn show(&self) {
         if self.alive {
-            print!(" X ");
-        } else {
             print!(" O ");
+        } else {
+            print!(" * ");
         }
     }
-    
-         pub fn set_alive(&mut self) {
+
+    pub fn set_alive(&mut self) {
         self.alive = true;
     }
-    
-    pub  fn set_dead(&mut self) {
+
+    pub fn set_dead(&mut self) {
         self.alive = false;
     }
-    
+
     pub fn is_alive(&self) -> bool {
         return self.alive == true;
     }
@@ -45,4 +45,4 @@ impl Cell{
     pub fn get_coordinates(&self) -> (i32, i32) {
         return (self.x, self.y);
     }
-} 
+}

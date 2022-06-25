@@ -13,7 +13,7 @@ def main():
     board.show()
     for iteration in range(ITERATIONS):
         board.update()
-        time.sleep(1)
+        time.sleep(0.5)
         board.show()
 
 
