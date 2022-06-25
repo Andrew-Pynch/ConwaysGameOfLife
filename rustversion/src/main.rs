@@ -1,9 +1,15 @@
 mod board;
+mod cell;
+
 fn main() {
     let rows = 10;
     let cols = 10;
     // let iterations = 100;
-    let game_board: board::Board= board::get_new_board(rows, cols);
+    let mut game_board: board::Board= board::get_new_board(rows, cols);
     // println!("{:?}", gameBoard);
-    game_board.print_board();
-}
+    for _ in 0..100 {
+        game_board.show();
+        println!();
+        game_board.update();
+    }
+}        

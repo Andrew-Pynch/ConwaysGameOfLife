@@ -1,1 +1,1 @@
-/Users/apynch/Github/ConwaysGameOfLife/rustversion/target/debug/rustversion: /Users/apynch/Github/ConwaysGameOfLife/rustversion/src/board.rs /Users/apynch/Github/ConwaysGameOfLife/rustversion/src/main.rs
+/Users/apynch/Github/ConwaysGameOfLife/rustversion/target/debug/rustversion: /Users/apynch/Github/ConwaysGameOfLife/rustversion/src/board.rs /Users/apynch/Github/ConwaysGameOfLife/rustversion/src/cell.rs /Users/apynch/Github/ConwaysGameOfLife/rustversion/src/main.rs
